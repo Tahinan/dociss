@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bolos Vulcão Premium</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:#faf7f3;
+color:#333;
+}
+
+:root{
+--marrom:#3d2417;
+--dourado:#c79a4a;
+--creme:#fffaf5;
+--texto:#555;
+}
+
+header{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+url("imagens/banner.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+color:white;
+
+}
+
+.hero{
+
+max-width:750px;
+
+animation:fade 1.3s;
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.hero h3{
+
+letter-spacing:6px;
+font-weight:300;
+margin-bottom:20px;
+color:#ffe2a6;
+
+}
+
+.hero h1{
+
+font-family:"Cormorant Garamond",serif;
+font-size:75px;
+line-height:1;
+margin-bottom:30px;
+
+}
+
+.hero p{
+
+font-size:20px;
+margin-bottom:40px;
+line-height:1.7;
+
+}
+
+.botao{
+
+display:inline-block;
+
+padding:18px 42px;
+
+background:var(--dourado);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.botao:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+.titulo{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.titulo h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:52px;
+
+color:var(--marrom);
+
+}
+
+.titulo p{
+
+margin-top:10px;
+
+color:#777;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+gap:35px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:280px;
+
+object-fit:cover;
+
+}
+
+.info{
+
+padding:30px;
+
+}
+
+.info h3{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:38px;
+
+color:var(--marrom);
+
+margin-bottom:15px;
+
+}
+
+.info p{
+
+color:var(--texto);
+
+line-height:1.8;
+
+margin-bottom:20px;
+
+}
+
+.preco{
+
+background:#f8f2eb;
+
+padding:18px;
+
+border-radius:12px;
+
+}
+
+.preco h4{
+
+margin-bottom:10px;
+
+color:var(--marrom);
+
+}
+
+.preco p{
+
+margin:8px 0;
+
+}
+
+.qualidades{
+
+background:white;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+
+}
+
+.item{
+
+padding:35px;
+
+background:#faf6f1;
+
+border-radius:18px;
+
+text-align:center;
+
+}
+
+.item span{
+
+font-size:50px;
+
+display:block;
+
+margin-bottom:15px;
+
+}
+
+.item h4{
+
+margin-bottom:12px;
+
+color:var(--marrom);
+
+}
+
+.cta{
+
+background:linear-gradient(135deg,#3d2417,#24130c);
+
+color:white;
+
+text-align:center;
+
+border-radius:30px;
+
+padding:70px 40px;
+
+}
+
+.cta h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:54px;
+
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+.whatsapp{
+
+display:inline-block;
+
+background:#25D366;
+
+color:white;
+
+padding:18px 40px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+footer{
+
+background:#2b180f;
+
+padding:40px;
+
+text-align:center;
+
+color:#ddd;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:52px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.titulo h2{
+
+font-size:40px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<h3>CONFEITARIA ARTESANAL DOCISS</h3>
+
+<h1>Bolos Vulcão Premium</h1>
+
+<p>
+Uma explosão de sabor, cobertura abundante e ingredientes selecionados para transformar qualquer momento em uma experiência inesquecível.
+</p>
+
+<a href="#sabores" class="botao">
+Conheça os Sabores
+</a>
+
+</div>
+
+</header>
+
+<section id="sabores">
+
+<div class="titulo">
+
+<h2>Nossos Bolos</h2>
+
+<p>Preparados sob encomenda.</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="imagens/chocolatudo.jpg">
+
+<div class="info">
+
+<h3>🍫 Chocolatudo</h3>
+
+<p>
+Massa de chocolate extremamente macia, recheada e coberta com brigadeiro gourmet cremoso que transborda em cada fatia.
+</p>
+
+<div class="preco">
+
+<h4>Tamanhos</h4>
+
+<p>Pequeno • 150g de massa / 100g de cobertura • R$ 15</p>
+
+<p>Grande • 660g de massa / 350g de cobertura • R$ 50</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="imagens/bolo_cenoura.jpg">
+
+<div class="info">
+
+<h3>🥕 Cenoura com Chocolate</h3>
+
+<p>
+Massa fofinha de cenoura coberta com uma generosa camada de chocolate cremoso, preparada na hora.
+</p>
+
+<div class="preco">
+
+<h4>Tamanhos</h4>
+
+<p>Pequeno • 150g de massa / 100g de cobertura • R$ 15</p>
+
+<p>Grande • 660g de massa / 350g de cobertura • R$ 50</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="qualidades">
+
+<div class="titulo">
+
+<h2>Por que escolher nossos bolos?</h2>
+
+</div>
+
+<div class="grid">
+
+<div class="item">
+<span>🍫</span>
+<h4>Muito Recheio</h4>
+<p>Cobertura cremosa e generosa em todos os bolos.</p>
+</div>
+
+<div class="item">
+<span>🥚</span>
+<h4>Ingredientes Frescos</h4>
+<p>Produção artesanal com ingredientes selecionados.</p>
+</div>
+
+<div class="item">
+<span>🎂</span>
+<h4>Feito Sob Encomenda</h4>
+<p>Seu bolo preparado especialmente para você.</p>
+</div>
+
+<div class="item">
+<span>❤️</span>
+<h4>Sabor Inesquecível</h4>
+<p>Receitas que conquistam desde a primeira fatia.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="cta">
+
+<h2>Peça o seu agora</h2>
+
+<p>
+Encomende seu bolo vulcão e surpreenda sua família, amigos ou clientes com uma sobremesa irresistível.
+</p>
+
+<a class="whatsapp" href="https://wa.me/5582996271285">
+Fazer Pedido pelo WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Bolos Vulcão Premium</h3>
+
+<p>Produção artesanal • Encomendas todos os dias</p>
+
+<!--<p>Instagram: @seuperfil</p>-->
+
+</footer>
+
+</body>
+</html>
